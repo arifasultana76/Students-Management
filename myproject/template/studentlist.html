@@ -1,0 +1,60 @@
+
+{% block body %}
+    
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>Student List</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Roll</th>
+    <th>Department</th>
+    <th>Email</th>
+    <th>Date of Birth</th>
+  </tr>
+  
+  {% for s in student %}
+  <tr>
+    <td>{{s.name}}</td>
+    <td>{{s.roll}}</td>
+    <td>{{s.department}}</td>
+    <td>{{s.email}}</td>
+    <td>{{s.dob}}</td>
+  </tr>
+    
+  {% endfor %}
+    
+</table>
+
+</body>
+</html>
+{% endblock body %}

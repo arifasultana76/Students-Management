@@ -1,0 +1,68 @@
+
+{% block body %}
+  
+  
+<!DOCTYPE html>
+<html>
+<style>
+form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+label {display: block;}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
+<body>
+
+<h2>Student Info Form</h2>
+
+<form method="POST">
+    {% csrf_token %}
+  <label for="fname">Name</label>
+  <input type="text" id="fname" name="name" placeholder="Your name..">
+
+  <label for="lname">Roll</label>
+  <input type="text" id="lname" name="roll" placeholder="Your roll..">
+
+  <label for="lname">Department</label>
+  <input type="text" id="lname" name="department" placeholder="Your department name..">
+
+  <label for="lname">Email</label>
+  <input type="email" id="lname" name="email" placeholder="Your email name..">
+
+  <label for="lname">Date of Birth</label>
+  <input type="date" id="date" name="dob" placeholder="Your dob name..">
+
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+{% endblock body %}
