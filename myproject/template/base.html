@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2,
+        p {
+            margin: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #14b2b5;
+            display: flex;
+        }
+
+        ul li a {
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul li a:hover:not(.active) {
+            background-color: #4f63e9;
+        }
+
+        ul li a.active {
+            background-color: #19ffd8;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'nav.html' %}
+
+
+    {% block body %}
+
+    {% endblock body %}
+
+
+</body>
+
+</html>

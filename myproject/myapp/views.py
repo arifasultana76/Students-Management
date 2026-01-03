@@ -1,5 +1,5 @@
 from django.shortcuts import render , redirect
-from myapp.models import StudentModel
+from myapp.models import *
 
 def studentlist(request):
     student_data=StudentModel.objects.all()
@@ -26,6 +26,11 @@ def students(request):
         ).save()
         return redirect('studentlist')
     return render(request,'students.html')
+
+def home(request):
+    return render(request,'base.html')
+
+
         
     
     
